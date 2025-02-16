@@ -1,23 +1,53 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-export default function HomeScreen({ navigation }) {
+const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>MedSync</Text>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Scan')}>
-        <Text style={styles.buttonText}>Scan Prescription</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Reminders')}>
-        <Text style={styles.buttonText}>View Medications</Text>
-      </TouchableOpacity>
+      <Text style={styles.subtitle}>AI-Powered Medication Management & Health Tracker</Text>
+      
+      <Button
+        title="Scan Prescription"
+        onPress={() => navigation.navigate('PrescriptionScanner')}
+      />
+      <Button
+        title="Set Reminders"
+        onPress={() => navigation.navigate('Reminders')}
+      />
+      <Button
+        title="Track Side Effects"
+        onPress={() => navigation.navigate('SideEffectTracker')}
+      />
+      <Button
+        title="Family & Caregiver Support"
+        onPress={() => navigation.navigate('CaregiverSupport')}
+      />
+      <Button
+        title="Voice Commands & Audio Assistance"
+        onPress={() => navigation.navigate('VoiceCommands')}
+      />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#f5f5f5' },
-  title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20 },
-  button: { backgroundColor: '#007bff', padding: 15, margin: 10, borderRadius: 8 },
-  buttonText: { color: '#fff', fontSize: 18 }
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+  },
+  subtitle: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginBottom: 32,
+  },
 });
+
+export default HomeScreen;

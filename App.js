@@ -1,20 +1,29 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen';
-import ScanScreen from './screens/ScanScreen';
-import RemindersScreen from './screens/RemindersScreen';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { Provider as PaperProvider } from "react-native-paper";
+import HomeScreen from "./screens/HomeScreen";
+import ScanPrescriptionScreen from "./screens/ScanPrescriptionScreen";
+import MedicationListScreen from "./screens/MedicationListScreen";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Scan" component={ScanScreen} />
-        <Stack.Screen name="Reminders" component={RemindersScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#007AFF" }, // iOS Blue
+            headerTintColor: "#fff",
+            headerTitleStyle: { fontSize: 18 },
+          }}
+        >
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Scan Prescription" component={ScanPrescriptionScreen} />
+          <Stack.Screen name="Medication List" component={MedicationListScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const HomeScreen = () => {
+  console.log("HomeScreen component is rendering!");
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Welcome to Home Screen!</Text>

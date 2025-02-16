@@ -8,7 +8,7 @@
         "bundleIdentifier": "com.Smriti.MedSync"
       },
       "android": {
-        "package": "com.Smriti.MedSnc"
+        "package": "com.Smriti.MedSync"
       },
         "expo": {
             "packagerOpts": {

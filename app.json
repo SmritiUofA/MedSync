@@ -9,7 +9,12 @@
       },
       "android": {
         "package": "com.Smriti.MedSnc"
-      }
+      },
+        "expo": {
+            "packagerOpts": {
+                "timeout": 60000
+            }
+        }
     }
   }
   

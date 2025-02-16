@@ -10,11 +10,9 @@
       "android": {
         "package": "com.Smriti.MedSync"
       },
-        "expo": {
-            "packagerOpts": {
-                "timeout": 60000
-            }
-        }
+      "packagerOpts": {
+          "timeout": 60000
+      }
     }
   }
   

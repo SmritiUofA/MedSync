@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "expo-camera": "^16.0.16",
+    "react-native-text-recognition": "^1.0.2"
+  }
+}

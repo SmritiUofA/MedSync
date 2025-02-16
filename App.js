@@ -7,7 +7,7 @@ import { StatusBar } from 'react-native';
 import HomeScreen from "./screens/HomeScreen";
 import ScanScreen from "./screens/ScanScreen";
 import MedicationListScreen from "./screens/MedicationListScreen";
-import RemindersScreen from "./screens/RemindersScreen";
+import ReminderScreen from "./screens/ReminderScreen";
 
 const Stack = createStackNavigator();
 
@@ -27,7 +27,7 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Scan" component={ScanScreen} />
           <Stack.Screen name="MedicationList" component={MedicationListScreen} />
-          <Stack.Screen name="Reminders" component={RemindersScreen} />
+          <Stack.Screen name="Reminder" component={ReminderScreen} />
         
         </Stack.Navigator>
       </NavigationContainer>

@@ -12,7 +12,10 @@
       },
       "packagerOpts": {
           "timeout": 60000
-      }
+      },
+      "assets": [
+          "./assets/*" 
+        ]
     }
   }
   

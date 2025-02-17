@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import MedicationCard from '../components/MedicationCard';
 
-export default function RemindersScreen() {
+export default function ReminderScreen() {
   const [medications, setMedications] = useState([
     { id: '1', name: 'Aspirin', time: '8:00 AM' },
     { id: '2', name: 'Metformin', time: '12:00 PM' },
